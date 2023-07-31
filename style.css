@@ -34,7 +34,6 @@
 .btns {
   display: flex;
   margin: auto;
-  background-color: blue;
 }
 .btn {
   width: 33%;
@@ -63,7 +62,6 @@
     display: flex;
     margin: 0;
     width: 138px;
-    background-color: blue;
   }
   .btn {
     width: 33%;
