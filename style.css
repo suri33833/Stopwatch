@@ -34,13 +34,39 @@
 .btns {
   display: flex;
   margin: auto;
+  background-color: blue;
 }
 .btn {
-  width: 50%;
+  width: 33%;
   font-weight: bold;
 }
 
 #reset,
 #pause {
   visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .center {
+    width: 185px;
+  }
+  .head {
+    width: 120px;
+    padding: 5;
+  }
+
+  .main p {
+    width: 31px;
+    padding: 7px;
+  }
+  .btns {
+    display: flex;
+    margin: 0;
+    width: 138px;
+    background-color: blue;
+  }
+  .btn {
+    width: 33%;
+    font-weight: bold;
+  }
 }
