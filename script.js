@@ -27,7 +27,7 @@ function startbtn() {
     hour.innerText = HH;
     minute.innerText = MM;
     second.innerText = SS;
-  }, 100);
+  }, 1000);
   return interval;
 }
 
