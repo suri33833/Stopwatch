@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 600px) {
-  .center {
+  /* .center {
     width: 185px;
   }
   .head {
@@ -66,5 +66,8 @@
   .btn {
     width: 33%;
     font-weight: bold;
+  } */
+  .container {
+    width: 100%;
   }
 }
