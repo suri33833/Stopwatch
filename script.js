@@ -8,6 +8,7 @@ let interval;
 let HH = 0;
 let MM = 0;
 let SS = 0;
+let isPause = false;
 
 function startbtn() {
   start.style.visibility = "hidden";
@@ -24,33 +25,35 @@ function startbtn() {
       HH++;
       MM = 0;
     }
-    hour.innerText = HH;
-    minute.innerText = MM;
-    second.innerText = SS;
+    hour.innerText = HH.toString().padStart(2, "0");
+    minute.innerText = MM.toString().padStart(2, "0");
+    second.innerText = SS.toString().padStart(2, "0");
   }, 1000);
-  return interval;
 }
 
 function resetbtn() {
-  hour.innerText = 0;
-  minute.innerText = 0;
-  second.innerText = 0;
   HH = 0;
   MM = 0;
   SS = 0;
+  isPause = false;
+  hour.innerText = HH.toString().padStart(2, "0");
+  minute.innerText = HH.toString().padStart(2, "0");
+  second.innerText = HH.toString().padStart(2, "0");
+  pause.innerText = "pause";
   reset.style.visibility = "hidden";
   start.style.visibility = "visible";
   pause.style.visibility = "hidden";
   clearInterval(interval);
 }
 
-let isPause = false;
 function pausebtn() {
   if (isPause) {
     isPause = false;
+    pause.innerText = "pause";
     startbtn();
   } else {
     clearInterval(interval);
     isPause = true;
+    pause.innerText = "resume";
   }
 }
